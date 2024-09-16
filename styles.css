@@ -1,0 +1,121 @@
+ * {
+   margin:0;
+   padding:0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .slider {
+    position: relative;
+    width: 100%;
+    height:600px;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .slides{
+    display: flex;
+    height: 100%;
+    width:100%;
+    align-items:center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  flex: 0 0 100%;
+  position: relative;
+}
+
+.slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-text{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color:white;
+}
+
+.buttons button{
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: rgba(255,255,255,0.7);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: rgba(255,255,255,1);
+}
+  
+
+ .btm-sliders {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  display: flex;
+  transform: translateX(-50%);
+}
+
+.btm-sliders span {
+  height: 15px;
+  width: 15px; /* Changed width to be the same as height for a circular look */
+  border: 2px solid white;
+  border-radius: 50%; /* Make dots circular */
+  cursor: pointer;
+  margin: 0 5px; /* Adjusted margin for better spacing */
+  background-color: transparent; /* Ensures background is transparent initially */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.btm-sliders span.active {
+  background-color: white; /* Highlight the active dot */
+}
+
+.btm-sliders span:hover {
+  background-color: rgba(255, 255, 255, 0.5); /* Slightly white on hover for visibility */
+}
+
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  .prev, .next, .btm-sliders {
+    z-index: 10; /* Higher z-index to stay on top */
+  }
+  
+  
+  button:focus {
+    outline: none; 
+  }
+   

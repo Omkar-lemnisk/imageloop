@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="slider">
+    <div class="slides">
+     
+     <div class="slide">   
+       <img src="image1.jpg" >
+       <div class="image-text">
+        <h2>Text for first image</h2>
+       </div>
+       <div class="buttons">
+        <button>button1</button>
+        <button>button2</button>
+       </div>  
+     </div>
+
+     <div class="slide">   
+      <img src="image2.jpg" >
+      <div class="image-text">
+        <h2>Text for second image</h2>
+      </div>
+      <div class="buttons">
+        <button>button3</button>
+        <button>button4</button>
+      </div>  
+     </div>
+
+     <div class="slide">   
+      <img src="image3.jpg" >
+      <div class="image-text">
+        <h2>Text for third image</h2>
+      </div>
+      <div class="buttons">
+        <button>button5</button>
+        <button>button6</button>
+      </div>  
+     </div>
+     
+    </div>
+
+    <div class="btm-sliders">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
