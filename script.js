@@ -114,6 +114,15 @@ document.addEventListener('DOMContentLoaded', () => {
   slidesContainer.insertBefore(lastSlide, slides[0]);
   
   const totalSlides = slides.length + 2;
+
+  // Set background images for all slides, including clones
+  // const allSlides = document.querySelectorAll('.slides .slide');
+  // allSlides.forEach((slide, index) => {
+  //     let imageIndex = index % slides.length; // This ensures correct indexing for cloned slides
+  //     slide.style.backgroundImage = `url('image${imageIndex + 1}.jpg')`;
+  // });
+
+  
   
   function showSlide(index, withTransition = true) {
       if (withTransition) {
